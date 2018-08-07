@@ -20,7 +20,6 @@ $( document ).ready(function(){
     var newTempUnit = currentTempUnit == "C" ? "F" : "C";
     $("#tempunit").text(newTempUnit);
     if (newTempUnit == "F") {
-      var fahTemp = Math.round(parseInt($("#temp").text()) * 9 / 5 + 32);
       $("#temperature").text(fahTemperature + " " + String.fromCharCode(176));
     } else {
       $("#temperature").text(currentTemperatureInCelsius + " " + String.fromCharCode(176));
@@ -35,7 +34,7 @@ function getWeather(lat, lon) {
   $.ajax({
     url: urlString, success: function (result) {
       $("#city").text(result.name);
-      currentTemperature = Math.round(result.main.temp * 9/5) - 459.67;
+      currentTemperature = Math.round((result.main.temp * 9/5) - 459.67);
       $("#temperature").text(currentTemperature + " " + String.fromCharCode(176));
       $("#summary").text(result.weather[0].description);
   
