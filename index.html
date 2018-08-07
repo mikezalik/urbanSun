@@ -13,26 +13,33 @@
         <script src="app.js"></script>
 </head>
 <body>
+        <div id="left"></div>
+        <div id="right"></div>
+
         <div id="navbar">
+            <div id="navbar-label">UrbanSun</div>   
         </div>
     <section id="header">
-        <h1>UrbanSun</h1>
+        <h1>UrbanSun</h1> 
+        <h1 class="sun">&#x2600;</h1> 
         <div id="icons" class="weather-type">
         </div>
     </section>
     
     <section id="weather-info">
         <div id="weather-info-container">
-                    <h2>Location</h2>
+                    <h2>location</h2>
                 <p><span id="city"></span>
-                    <h2>Temperature</h2>
+                    <h2>temperature</h2>
                 <p><span id="temperature"></span>
-                    <h2>Summary</h2>
+                    <h2>summary</h2>
                 <p id="summary"></p>
         </div>
     </section>
     <section id="after-weather">
-
+        <div id="button-container">
+                <input type="button" id="button" value="update weather" onclick="location.reload();"></input>
+        </div>
 
     </section>
 
@@ -40,6 +47,8 @@
 
 </body>
 <footer>
+        <div id="navbar-b">Designed and Developed by Michael Zalik
+              </div>
 
 </footer>
 </html>
