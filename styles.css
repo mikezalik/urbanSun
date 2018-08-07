@@ -1,5 +1,60 @@
+/* As hex codes */
+
+/*.color-primary-0 { color: #E5A304 }	/* Main Primary color */
+/* .color-primary-1 { color: #FFD05D }
+.color-primary-2 { color: #FCC132 }
+.color-primary-3 { color: #B88200 }
+.color-primary-4 { color: #8F6500 } */
+
+
+
 * {
-font-family: 'Courier New', Courier, monospace;
+font-family: 'Nanum Gothic', sans-serif;
+
+}
+
+body {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+
+}
 
 
+#header {
+    justify-content: center;
+    font-size: 3em;
+    padding: .5em;
+    max-width: 100%;
+    background-color: #FFD05D;
+    color: whitesmoke;
+    display: block;
+}
+
+#weather-info {
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+#weather-info-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background-color: #FFD05D;
+    color: #808000;
+    padding-top: 1em;
+    padding-bottom: 50em;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #8F6500;
+    position: fixed; 
+    top: 0px; 
+    width: 100%;
+    padding:1em; 
 }

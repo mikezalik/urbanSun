@@ -1,5 +1,5 @@
-var api = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/";
-var key = "aaf4e3d11b6e88832c7d784e4b1d189f/";
+var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
+var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 var tempUnit = 'C';
 var currentTemperatureInCelsius;
@@ -7,8 +7,8 @@ var currentTemperatureInCelsius;
 $( document ).ready(function(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-      var lat = position.coords.latitude;
-      var lon = position.coords.longitude;
+      var lat = "lat=" + position.coords.latitude;
+      var lon = "lon=" + position.coords.longitude;
       getWeather(lat, lon);
     });
   } else {
@@ -29,57 +29,19 @@ $( document ).ready(function(){
   
 })
 
-var invocation = new XMLHttpRequest();
-var url = 'https://api.darksky.net/forecast/';
-   
-function callOtherDomain() {
-  if(invocation) {    
-    invocation.open('GET', url, true);
-    invocation.onreadystatechange = handler;
-    invocation.send(); 
-  }
-}
 
 function getWeather(lat, lon) {
-  var urlString = api + key+ lat + "," + lon;
+  var urlString = api + lat + "&" + lon + key;
   $.ajax({
     url: urlString, success: function (result) {
-      $("#timezone").text(result.timezone);
-      currentTemperature = Math.round(result.currently.temperature * 10) / 10;
+      $("#city").text(result.name);
+      currentTemperature = Math.round(result.main.temp * 9/5) - 459.67;
       $("#temperature").text(currentTemperature + " " + String.fromCharCode(176));
-      $("#summary").text(result.currently.summary);
+      $("#summary").text(result.weather[0].description);
+  
     
     }
   });
 }
 
-function IconGen(desc) {
-  var desc = desc.toLowerCase()
-  switch (desc) {
-    case 'drizzle':
-      addIcon(desc)
-      break;
-    case 'clouds':
-      addIcon(desc)
-      break;
-    case 'rain':
-      addIcon(desc)
-      break;
-    case 'snow':
-      addIcon(desc)
-      break;
-    case 'clear':
-      addIcon(desc)
-      break;
-    case 'thunderstom':
-      addIcon(desc)
-      break;
-    default:
-      $('div.clouds').removeClass('hide');
-  }
-}
-
-function addIcon(desc) {
-  $('div.' + desc).removeClass('hide');
-}
 
