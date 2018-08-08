@@ -1,9 +1,13 @@
+// Variables
+
+
 var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 var tempUnit = 'C';
 var currentTemperatureInCelsius;
 
+// Geolocation - Lat and Lon for openweather API
 $( document ).ready(function(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -15,6 +19,7 @@ $( document ).ready(function(){
     console.log("Geolocation is not supported by this browser.");
   }
 
+  //Temp conversion - Future implementation
   $("#tempunit").click(function () {
     var currentTempUnit = $("#tempunit").text();
     var newTempUnit = currentTempUnit == "C" ? "F" : "C";
@@ -25,10 +30,9 @@ $( document ).ready(function(){
       $("#temperature").text(currentTemperatureInCelsius + " " + String.fromCharCode(176));
     }
   });
-  
 })
 
-
+//AJAX request - Data received in JSON
 function getWeather(lat, lon) {
   var urlString = api + lat + "&" + lon + key;
   $.ajax({
@@ -37,8 +41,7 @@ function getWeather(lat, lon) {
       currentTemperature = Math.round((result.main.temp * 9/5) - 459.67);
       $("#temperature").text(currentTemperature + " " + String.fromCharCode(176));
       $("#summary").text(result.weather[0].description);
-  
-    
+      $("#humidity").text(result.main.humidity + "%");
     }
   });
 }
