@@ -17,14 +17,14 @@ body {
     margin-right: auto;
     text-align: center;
     display: block;
-    background-color:#FFDF7F;
+    background-color:rgb(255, 243, 209);
 }
 .navbar {
     box-shadow: 0px 20px 40px rgba(0,0,0,0.5);
 }
 
 .jumbotron {
-   background-color: #FFDF7F;
+   background-color: rgb(255, 243, 209);
 }
 
 .row {
@@ -51,7 +51,7 @@ body {
 }
 
 #left, #right {
-	background: #FFCD39;
+	background: #FFDF7F;
     position: fixed;
     top: 0; bottom: 0;
 	width: 15px;
