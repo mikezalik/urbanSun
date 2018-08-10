@@ -9,7 +9,7 @@
 .color-primary-5 { color: #FFE164 }
 
 * {
-font-family: 'Nanum Gothic', sans-serif;
+
 }
 
 body {
@@ -36,7 +36,10 @@ body {
 
 .jumbotron {
    background-color: #FFE164;
+   font-family: 'Oswald', sans-serif;
 }
+
+
 
 .row {
     background-color:#F0F0EB; 
@@ -50,6 +53,7 @@ body {
 }
 
 .container-info {
+    font-family: 'Nanum Gothic', sans-serif;
     padding: 3em;
     background-color: #F0F0EB;
     border: none;
