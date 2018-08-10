@@ -6,6 +6,7 @@
 .color-primary-2 { color: #FFDF7F }
 .color-primary-3 { color: #FFCD39 }
 .color-primary-4 { color: #E6AF0C }
+.color-primary-5 { color: #FFE164 }
 
 * {
 font-family: 'Nanum Gothic', sans-serif;
@@ -17,48 +18,53 @@ body {
     margin-right: auto;
     text-align: center;
     display: block;
-    background-color:rgb(255, 243, 209);
+    background-color:#F0F0EB;
 }
 .navbar {
+    background-color: #324B5A;
     box-shadow: 0px 20px 40px rgba(0,0,0,0.1);
 }
 
+.navbar-dark{
+    background-color: #324B5A;
+}
+
+.bg-dark{
+    background-color: #324B5A;
+}
+
+
 .jumbotron {
-   background-color: rgb(255, 243, 209);
+   background-color: #FFE164;
 }
 
 .row {
-    background-color:#FFEAAC; 
+    background-color:#F0F0EB; 
 }
 
-.container{
+.container {
     padding: 3em;
-    background-color: #FFEAAC;
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.3); 
+    background-color: #FFE164; 
+    border: none;
+    border-radius: 5px;
+}
+
+.container-info {
+    padding: 3em;
+    background-color: #F0F0EB;
     border: none;
     border-radius: 5px;
 }
 
 #navbar-b{
     overflow: hidden;
-    background-color:whitesmoke ;
+    background-color:#324B5A ;
     position: fixed; 
     bottom: 0px; 
     width: 100%;
     padding:1em; 
     text-align: left;
     font-size: .5em;
-}
-
-#left, #right {
-	background: #FFDF7F;
-    position: fixed;
-    top: 0; bottom: 0;
-	width: 15px;
-	}
-#left { left: 0; 
-}
-#right { right: 0; 
 }
 
 		
