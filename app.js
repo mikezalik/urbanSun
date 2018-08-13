@@ -1,13 +1,22 @@
-// Variables
+// UrbanSun, JavaScript/JQuery
+// App utilizes openweathermap api for local weather updates.
+// 
 
 
+
+// variables
 var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 var tempUnit = 'C';
 var currentTemperatureInCelsius;
 
-// Geolocation - Lat and Lon for openweather API
+
+
+/* Geolocation - Lat and Lon for openweathermap api.
+Prompts user in browser at initial access and during refresh
+depending on browser and preferences. */
+
 $( document ).ready(function(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -19,7 +28,10 @@ $( document ).ready(function(){
     console.log("Geolocation is not supported by this browser.");
   }
 
-  //Temp conversion - Future implementation
+  
+  /* Temp conversion - Future implementation
+ TODO: time zone and unit selection?
+  */
   $("#tempunit").click(function () {
     var currentTempUnit = $("#tempunit").text();
     var newTempUnit = currentTempUnit == "C" ? "F" : "C";
@@ -32,7 +44,10 @@ $( document ).ready(function(){
   });
 })
 
-//AJAX request - Data received in JSON
+
+/* AJAX request - Data received in JSON
+urlString contains api, lat, lon and key for AJAX call.
+*/
 function getWeather(lat, lon) {
   var urlString = api + lat + "&" + lon + key;
   $.ajax({
