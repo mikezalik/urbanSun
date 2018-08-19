@@ -30,7 +30,7 @@ body {
         max-width:100%;
      }
     .display-3 {
-         font-size: 2.5em;
+         font-size: 2.8em;
      }
 }
 @media all and (min-width: 370px) and (max-width: 768px) {
@@ -42,7 +42,7 @@ body {
     }
 
     .display-3 {
-        font-size: 3em;
+        font-size: 4em;
     }
  } 
 
@@ -66,8 +66,17 @@ body {
         background-color: #FFE164;
         font-family: 'Oswald', sans-serif;
         justify-content: center;
+        padding:.8em;
     }
  }
+ @media all and (min-width: 370px) and (max-width: 768px) {
+    .jumbotron {
+        background-color: #FFE164;
+        font-family: 'Oswald', sans-serif;
+        justify-content: center;
+        padding:.8em;
+    }
+  }
 .row {
     background-color:#F0F0EB; 
 }
@@ -87,7 +96,7 @@ body {
  }
  @media all and (min-width: 370px) and (max-width: 768px) {
     .container {
-        padding: 1em;
+        padding: .5em;
         background-color: #FFE164; 
         border: none;
         border-radius: 5px;  
@@ -106,12 +115,11 @@ body {
         background-color: #F0F0EB;
         border: none;
         border-radius: 5px;
-        font-size: .5em;  
     }
  }
 @media all and (min-width: 370px) and (max-width: 768px) {
     .container-info {
-        padding: 1em;
+        padding: .5em;
         background-color: #F0F0EB;
         border: none;
         border-radius: 5px;
