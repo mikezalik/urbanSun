@@ -1,17 +1,10 @@
-/* primary and complement color */
-/* As hex codes */
-
-.color-primary-0 { color: #FFD65A }	/* Primary color */
-.color-primary-1 { color: #FFEAAC }
-.color-primary-2 { color: #FFDF7F }
-.color-primary-3 { color: #FFCD39 }
-.color-primary-4 { color: #E6AF0C }
-.color-primary-5 { color: #FFE164 }
-
+/* @media all and (min-width: 1024px) and (max-width: 1280px) { }
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 370px) and (max-width: 768px) { }
+@media all and (max-width: 370px) { } */
 * {
-
+    font-size: 16px;
 }
-
 body {
     justify-content: center;
     margin-left: auto;
@@ -20,38 +13,76 @@ body {
     display: block;
     background-color:#F0F0EB;
 }
+@media all and (max-width: 374px) {
+    * {
+        max-height: 17em;
+    }
+    h2 {
+        font-size: 1.75em;
+    }
+    body {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+        background-color:#F0F0EB;
+        max-width:100%;
+     }
+}
+@media all and (min-width: 374px) and (max-width: 768px) {
+    * {
+        max-height: 25em;
+    }
+ } 
+
 .navbar {
     background-color: #324B5A;
     box-shadow: 0px 20px 40px rgba(0,0,0,0.1);
 }
-
 .navbar-dark{
     background-color: #324B5A;
 }
-
 .bg-dark{
     background-color: #324B5A;
 }
-
-
 .jumbotron {
    background-color: #FFE164;
    font-family: 'Oswald', sans-serif;
+   justify-content: center;
 }
-
-
-
+@media all and (max-width: 374px) {
+    .jumbotron {
+        background-color: #FFE164;
+        font-family: 'Oswald', sans-serif;
+        justify-content: center;
+    }
+ }
 .row {
     background-color:#F0F0EB; 
 }
-
 .container {
     padding: 3em;
     background-color: #FFE164; 
     border: none;
     border-radius: 5px;
 }
-
+@media all and (max-width: 374px) {
+    .container {
+        padding: .1em;
+        background-color: #FFE164; 
+        border: none;
+        border-radius: 5px;  
+    }
+ }
+ @media all and (min-width: 374px) and (max-width: 768px) {
+    .container {
+        padding: 1em;
+        background-color: #FFE164; 
+        border: none;
+        border-radius: 5px;  
+    }
+  }
 .container-info {
     font-family: 'Nanum Gothic', sans-serif;
     padding: 3em;
@@ -59,8 +90,29 @@ body {
     border: none;
     border-radius: 5px;
 }
+@media all and (max-width: 374px) {
+    .container-info {
+        padding: .1em;
+        background-color: #F0F0EB;
+        border: none;
+        border-radius: 5px;
+        font-size: .5em;  
+    }
+ }
+@media all and (min-width: 374px) and (max-width: 768px) {
+    .container-info {
+        padding: 1em;
+        background-color: #F0F0EB;
+        border: none;
+        border-radius: 5px;
+        font-size: .5em;
+        margin-left: auto;
+        margin-right: auto;
+        max-width:90%; 
+    }
+ }
 
-#navbar-b{
+    #navbar-b{
     overflow: hidden;
     background-color:#324B5A ;
     position: fixed; 
