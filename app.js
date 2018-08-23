@@ -20,7 +20,7 @@ $( document ).ready(function(){
     console.log("Geolocation is not supported by this browser.");
   }
 
-  // Temp conversion - Future implementation?
+  // Temp conversion
   $("#tempunit").click(function () {
     var currentTempUnit = $("#tempunit").text();
     var newTempUnit = currentTempUnit == "C" ? "F" : "C";
