@@ -5,8 +5,7 @@
 var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
-var tempUnit = 'C';
-var currentTemperatureInCelsius;
+
 
 // Geolocation - Lat and Lon for openweathermap api.
 $( document ).ready(function(){
@@ -33,14 +32,14 @@ $( document ).ready(function(){
   });
 })
 
-// AJAX request - Data received in JSON
+// AJAX request - JSON
 function getWeather(lat, lon) {
   var urlString = api + lat + "&" + lon + key;
   $.ajax({
     url: urlString, success: function (result) {
       $("#city").text(result.name);
       currentTemperature = Math.round((result.main.temp * 9/5) - 459.67);
-      $("#temperature").text(currentTemperature + " " + String.fromCharCode(176));
+      $("#temperature").text(currentTemperature + String.fromCharCode(176));
       $("#summary").text(result.weather[0].description);
       $("#humidity").text(result.main.humidity + "%");
     }
