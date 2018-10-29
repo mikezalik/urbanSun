@@ -18,8 +18,19 @@ $( document ).ready(function(){
   } else {
     console.log("Geolocation is not supported by this browser.");
   }
-
-
+   
+  // Temp conversion
+   $("#tempunit").click(function () {
+    var currentTempUnit = $("#tempunit").text();
+    var newTempUnit = currentTempUnit == "C" ? "F" : "C";
+    $("#tempunit").text(newTempUnit);
+    if (newTempUnit == "F") {
+      $("#temperature").text(fahTemperature + " " + String.fromCharCode(176));
+    } else {
+      $("#temperature").text(currentTemperatureInCelsius + " " + String.fromCharCode(176));
+    }
+ });
+})
 
 // AJAX request - JSON
 function getWeather(lat, lon) {
@@ -34,6 +45,5 @@ function getWeather(lat, lon) {
     }
   });
 }
-
 
 
